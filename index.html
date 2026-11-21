@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>OUR LITTLE UNIVERSE ❤️ — A Cinematic Journey</title>
+  <meta name="description" content="A cinematic, interactive storytelling experience celebrating our journey through photographs, words, and cherished memories." />
+  <meta name="theme-color" content="#0D0C13" />
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Lenis Smooth Scroll Library (Standalone Local + CDN Resilient) -->
+  <script src="lenis.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="universe-body">
+
+  <!-- Grain Canvas Overlay -->
+  <canvas id="film-grain-canvas" class="film-grain" aria-hidden="true"></canvas>
+
+  <!-- Ambient Light Vignette -->
+  <div class="cinematic-vignette" aria-hidden="true"></div>
+
+  <!-- Custom Cinematic Mouse Cursor (Desktop) -->
+  <div id="cinematic-cursor" class="cinematic-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Global Header / Audio Toggle -->
+  <header class="cinematic-header" role="banner">
+    <div class="brand-signature">
+      <span class="brand-monogram">OLU</span>
+      <span class="brand-text">OUR LITTLE UNIVERSE</span>
+    </div>
+
+    <div class="header-controls">
+      <!-- Ambient Music Toggle -->
+      <button id="ambient-audio-toggle" class="audio-toggle-btn" aria-label="Toggle ambient soundtrack" title="Toggle romantic soundtrack">
+        <span class="audio-waves" aria-hidden="true">
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+        </span>
+        <span class="audio-label" id="audio-label">SOUNDTRACK : OFF</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Vertical Chapter Progress Indicator (Right Side) -->
+  <nav class="chapter-dock" aria-label="Story Chapters">
+    <ul class="chapter-dots-list" role="list">
+      <li class="chapter-dot-item active" data-chapter="1">
+        <button class="chapter-dot-btn" aria-label="Chapter 01: Where It All Started" data-target="chapter-1">
+          <span class="chapter-dot-index">01</span>
+          <span class="chapter-dot-line"></span>
+          <span class="chapter-dot-title">Where It All Started</span>
+        </button>
+      </li>
+      <li class="chapter-dot-item" data-chapter="2">
+        <button class="chapter-dot-btn" aria-label="Chapter 02: A Big Thank You To Ramadan &amp; Allah" data-target="chapter-2">
+          <span class="chapter-dot-index">02</span>
+          <span class="chapter-dot-line"></span>
+          <span class="chapter-dot-title">Ramadan &amp; Blessings</span>
+        </button>
+      </li>
+      <li class="chapter-dot-item" data-chapter="3">
+        <button class="chapter-dot-btn" aria-label="Chapter 03: Our Instagram Memories" data-target="chapter-3">
+          <span class="chapter-dot-index">03</span>
+          <span class="chapter-dot-line"></span>
+          <span class="chapter-dot-title">Instagram Memories</span>
+        </button>
+      </li>
+      <li class="chapter-dot-item" data-chapter="4">
+        <button class="chapter-dot-btn" aria-label="Chapter 04: The Telephones Know Everything" data-target="chapter-4">
+          <span class="chapter-dot-index">04</span>
+          <span class="chapter-dot-line"></span>
+          <span class="chapter-dot-title">The Telephones</span>
+        </button>
+      </li>
+      <li class="chapter-dot-item" data-chapter="5">
+        <button class="chapter-dot-btn" aria-label="Chapter 05: And This Is Only The Beginning" data-target="chapter-5">
+          <span class="chapter-dot-index">05</span>
+          <span class="chapter-dot-line"></span>
+          <span class="chapter-dot-title">The Beginning</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN STORY CONTAINER
+  ══════════════════════════════════════════════════════════ -->
+  <main class="story-container" id="story-container">
+
+    <!-- ──────────────────────────────────────────────────────────
+         CHAPTER 01 — WHERE IT ALL STARTED
+    ────────────────────────────────────────────────────────── -->
+    <section class="story-chapter chapter-01 active" id="chapter-1" data-chapter-index="1" aria-label="Chapter 1: Where It All Started">
+      <!-- Background Image Layer -->
+      <div class="chapter-bg-layer" aria-hidden="true">
+        <img src="alvas.jpg" alt="Alva's Education Foundation" class="chapter-bg-image ken-burns-zoom" loading="eager" />
+        <div class="chapter-overlay chapter-01-overlay"></div>
+      </div>
+
+      <!-- Chapter Content -->
+      <div class="chapter-content">
+        <div class="chapter-badge">
+          <span class="chapter-badge-roman">CHAPTER 01</span>
+          <span class="chapter-badge-sep">•</span>
+          <span class="chapter-badge-sub">THE PROLOGUE</span>
+        </div>
+
+        <h1 class="chapter-title chapter-01-title split-text" id="ch1-title">
+          WHERE IT ALL STARTED
+        </h1>
+
+        <div class="accent-gold-line" aria-hidden="true"></div>
+
+        <p class="chapter-subtitle chapter-01-sub">
+          &ldquo;Alva&rsquo;s &mdash; the place where our story began.&rdquo;
+        </p>
+
+        <!-- Direct Next Chapter Button -->
+        <div class="chapter-nav-action-row">
+          <button class="chapter-next-btn" data-next-chapter="2" aria-label="Go to Chapter 02: Ramadan &amp; Blessings">
+            <span class="btn-text">NEXT CHAPTER</span>
+            <span class="btn-subtext">Ramadan &amp; Blessings</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-cue" id="scroll-cue-1" role="button" tabindex="0" aria-label="Scroll to Chapter 2">
+          <span class="scroll-cue-text">SCROLL TO DISCOVER</span>
+          <div class="scroll-cue-line-wrap" aria-hidden="true">
+            <span class="scroll-cue-dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────────
+         CHAPTER 02 — A BIG THANK YOU TO RAMADAN AND ALLAH
+    ────────────────────────────────────────────────────────── -->
+    <section class="story-chapter chapter-02" id="chapter-2" data-chapter-index="2" aria-label="Chapter 2: A Big Thank You To Ramadan &amp; Allah">
+      <!-- Golden Particles Canvas Layer -->
+      <canvas id="golden-particles-canvas" class="golden-particles-canvas" aria-hidden="true"></canvas>
+
+      <!-- Background Atmosphere Layer -->
+      <div class="chapter-bg-layer" aria-hidden="true">
+        <div class="ramadan-ambient-glow"></div>
+        <div class="chapter-overlay chapter-02-overlay"></div>
+      </div>
+
+      <!-- Chapter Content -->
+      <div class="chapter-content chapter-02-content">
+        <!-- Visual Artpiece Frame (Preserves crescent moon, lanterns & calligraphy) -->
+        <div class="ramadan-artwork-stage">
+          <div class="ramadan-artwork-glow" aria-hidden="true"></div>
+          <div class="ramadan-artwork-frame">
+            <img src="ramadan.jpg" alt="Ramadan Mubarak Crescent Moon and Lanterns" class="ramadan-image" loading="lazy" />
+            <div class="ramadan-frame-shimmer" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="ramadan-text-wrapper">
+          <div class="chapter-badge">
+            <span class="chapter-badge-roman">CHAPTER 02</span>
+            <span class="chapter-badge-sep">•</span>
+            <span class="chapter-badge-sub">BLESSINGS &amp; FAITH</span>
+          </div>
+
+          <h2 class="chapter-title chapter-02-title">
+            <span class="title-stage-1">A BIG THANK YOU</span>
+            <span class="title-stage-2">TO RAMADAN &amp; ALLAH</span>
+          </h2>
+
+          <div class="accent-gold-line" aria-hidden="true"></div>
+
+          <p class="chapter-subtitle chapter-02-sub">
+            &ldquo;Some beautiful beginnings come from blessings we never expected.&rdquo;
+          </p>
+
+          <!-- Direct Next Chapter Button -->
+          <div class="chapter-nav-action-row">
+            <button class="chapter-next-btn" data-next-chapter="3" aria-label="Go to Chapter 03: Our Instagram Memories">
+              <span class="btn-text">NEXT CHAPTER</span>
+              <span class="btn-subtext">Instagram Memories</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────────
+         CHAPTER 03 — OUR INSTAGRAM MEMORIES
+    ────────────────────────────────────────────────────────── -->
+    <section class="story-chapter chapter-03" id="chapter-3" data-chapter-index="3" aria-label="Chapter 3: Our Instagram Memories">
+      <!-- Background Atmosphere -->
+      <div class="chapter-bg-layer" aria-hidden="true">
+        <div class="instagram-ambient-backdrop"></div>
+        <div class="chapter-overlay chapter-03-overlay"></div>
+      </div>
+
+      <!-- Chapter Content -->
+      <div class="chapter-content chapter-03-content">
+        <div class="chapter-badge">
+          <span class="chapter-badge-roman">CHAPTER 03</span>
+          <span class="chapter-badge-sep">•</span>
+          <span class="chapter-badge-sub">THE FIRST WORDS</span>
+        </div>
+
+        <h2 class="chapter-title chapter-03-title">
+          OUR INSTAGRAM MEMORIES
+        </h2>
+
+        <p class="chapter-intro-sub">
+          Where a hesitant wish sparked a conversation that changed everything.
+        </p>
+
+        <!-- Custom Luxury Messaging Stage -->
+        <div class="messaging-device-card" id="messaging-card">
+          <!-- Chat Header -->
+          <div class="chat-header">
+            <div class="chat-contact-info">
+              <div class="chat-avatar" aria-hidden="true">
+                <span class="avatar-letter">R</span>
+                <span class="avatar-status-dot"></span>
+              </div>
+              <div class="chat-meta">
+                <span class="chat-handle">_ruksanaz_</span>
+                <span class="chat-status">Active memory</span>
+              </div>
+            </div>
+
+            <div class="chat-actions">
+              <button id="replay-chat-btn" class="replay-chat-btn" title="Replay conversation" aria-label="Replay conversation">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                <span>REPLAY</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Date Pill -->
+          <div class="chat-date-pill">
+            <span class="date-icon" aria-hidden="true">✦</span>
+            <span>29 APRIL 2024</span>
+            <span class="date-icon" aria-hidden="true">✦</span>
+          </div>
+
+          <!-- Messages Stream Container -->
+          <div class="chat-messages-stream" id="chat-stream" role="log" aria-live="polite">
+            <!-- Injected progressively by script.js -->
+          </div>
+
+          <!-- Typing Indicator -->
+          <div class="chat-typing-row hidden" id="chat-typing-indicator" aria-hidden="true">
+            <div class="chat-typing-bubble">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+            </div>
+            <span class="typing-note">she is typing...</span>
+          </div>
+        </div>
+
+        <!-- Progress Cue below conversation -->
+        <div class="chat-completion-hint hidden" id="chat-completion-hint">
+          <span class="completion-line"></span>
+          <span class="completion-text">And from that story, ours began to write itself.</span>
+        </div>
+
+        <!-- Direct Next Chapter Button -->
+        <div class="chapter-nav-action-row">
+          <button class="chapter-next-btn" data-next-chapter="4" aria-label="Go to Chapter 04: The Telephones Know Everything">
+            <span class="btn-text">NEXT CHAPTER</span>
+            <span class="btn-subtext">The Coin Box</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────────
+         CHAPTER 04 — THE TELEPHONES KNOW EVERYTHING ABOUT US
+    ────────────────────────────────────────────────────────── -->
+    <section class="story-chapter chapter-04" id="chapter-4" data-chapter-index="4" aria-label="Chapter 4: The Telephones Know Everything About Us">
+      <!-- Background Image Layer -->
+      <div class="chapter-bg-layer" aria-hidden="true">
+        <img src="coin-telephone-blended.jpg" alt="Alva's vintage coin box telephone memory" class="chapter-bg-image telephone-zoom" loading="lazy" />
+        <div class="chapter-overlay chapter-04-overlay"></div>
+        <div class="telephone-halo-glow" aria-hidden="true"></div>
+        <!-- Ringing expanding pulse rings -->
+        <div class="telephone-pulse-rings" id="telephone-pulse-rings" aria-hidden="true">
+          <span class="pulse-ring ring-1"></span>
+          <span class="pulse-ring ring-2"></span>
+          <span class="pulse-ring ring-3"></span>
+        </div>
+      </div>
+
+      <!-- Chapter Content -->
+      <div class="chapter-content chapter-04-content">
+        <div class="chapter-badge">
+          <span class="chapter-badge-roman">CHAPTER 04</span>
+          <span class="chapter-badge-sep">•</span>
+          <span class="chapter-badge-sub">THE COIN BOX OF MEMORIES</span>
+        </div>
+
+        <h2 class="chapter-title chapter-04-title">
+          <span class="tel-line tel-line-1">THE TELEPHONES</span>
+          <span class="tel-line tel-line-2">KNOW EVERYTHING</span>
+          <span class="tel-line tel-line-3">ABOUT US.</span>
+        </h2>
+
+        <div class="accent-gold-line" aria-hidden="true"></div>
+
+        <p class="chapter-subtitle chapter-04-sub">
+          POV: coin box remembers every call you waited for in your Alva&rsquo;s days. Every coin, every ring, and every heartbeat on that line.
+        </p>
+
+        <!-- Vintage Telephone Audio Toggle -->
+        <div class="telephone-action-row">
+          <button id="telephone-ring-toggle" class="telephone-bell-btn" aria-label="Listen to vintage telephone ring" title="Play vintage telephone ring">
+            <svg class="bell-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span id="tel-ring-label">☎ LISTEN TO THE RING</span>
+          </button>
+        </div>
+
+        <!-- Direct Next Chapter Button -->
+        <div class="chapter-nav-action-row">
+          <button class="chapter-next-btn" data-next-chapter="5" aria-label="Go to Chapter 05: And This Is Only The Beginning">
+            <span class="btn-text">NEXT CHAPTER</span>
+            <span class="btn-subtext">The Epilogue</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────────
+         CHAPTER 05 — AND THIS IS ONLY THE BEGINNING
+    ────────────────────────────────────────────────────────── -->
+    <section class="story-chapter chapter-05" id="chapter-5" data-chapter-index="5" aria-label="Chapter 5: And This Is Only The Beginning">
+      <!-- Background Ambient Starlight Layer -->
+      <div class="chapter-bg-layer" aria-hidden="true">
+        <div class="epilogue-ambient-aura"></div>
+        <div class="chapter-overlay chapter-05-overlay"></div>
+      </div>
+
+      <!-- Chapter Content -->
+      <div class="chapter-content chapter-05-content">
+        <div class="chapter-badge">
+          <span class="chapter-badge-roman">CHAPTER 05</span>
+          <span class="chapter-badge-sep">•</span>
+          <span class="chapter-badge-sub">THE EPILOGUE</span>
+        </div>
+
+        <h2 class="chapter-title chapter-05-title">
+          <span class="begin-line-1">AND THIS IS ONLY</span>
+          <span class="begin-line-2">THE BEGINNING.</span>
+        </h2>
+
+        <div class="infinity-ornament" aria-hidden="true">
+          <span class="infinity-symbol">✦ &nbsp; ∞ &nbsp; ✦</span>
+        </div>
+
+        <p class="chapter-subtitle chapter-05-quote">
+          &ldquo;Some memories become stories. Some stories become forever.&rdquo;
+        </p>
+
+        <p class="chapter-closing-promise">
+          A little more of us, still waiting to be written.
+        </p>
+
+        <!-- Experience Again Button -->
+        <div class="restart-story-row">
+          <button id="restart-story-btn" class="restart-story-btn" aria-label="Restart story from Chapter 1">
+            <span class="restart-icon" aria-hidden="true">↻</span>
+            <span class="restart-text">EXPERIENCE OUR STORY AGAIN</span>
+          </button>
+        </div>
+
+        <!-- Footer Signature -->
+        <footer class="universe-footer" role="contentinfo">
+          <p class="footer-dedication">
+            Crafted with all my heart for my favorite person in the entire universe.
+          </p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Floating Chapter Quick-Navigation Dock -->
+  <aside class="floating-nav-dock" id="floating-nav-dock" aria-label="Quick Chapter Navigation">
+    <button id="floating-prev-btn" class="dock-btn dock-prev-btn hidden" aria-label="Previous Chapter" title="Previous Chapter">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      <span class="dock-btn-text">PREV</span>
+    </button>
+    <button id="floating-next-btn" class="dock-btn dock-next-btn" aria-label="Next Chapter" title="Go to Next Chapter">
+      <span class="dock-label" id="dock-btn-label">NEXT CHAPTER</span>
+      <span class="dock-step" id="dock-chapter-indicator">02 / 05</span>
+      <svg class="dock-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+  </aside>
+
+  <!-- Interactive Script -->
+  <script src="script.js"></script>
+</body>
+</html>
+
